@@ -1,5 +1,5 @@
 def decode_alpha(alpha)
-  morse_dict = {
+  morse_codes = {
     'A' => '.-', 'B' => '-...', 'C' => '-.-.', 'D' => '-..', 'E' => '.',
     'F' => '..-.', 'G' => '--.', 'H' => '....',
     'I' => '..', 'J' => '.---', 'K' => '-.-', 'L' => '.-..',
@@ -8,19 +8,21 @@ def decode_alpha(alpha)
     'U' => '..-', 'V' => '...-', 'W' => '.--', 'X' => '-..-',
     'Y' => '-.--', 'Z' => '--..'
   }
-  morse_dict.key(alpha)
+  morse_codes.key(alpha)
 end
 
 def decode_word(text)
   array = text.split
   wordarray = []
-  array.each { |letter| wordarray.push(decode_char(letter)) }
+  array.each { |letter| wordarray.push(decode_alpha(letter)) }
   wordarray.join
 end
 
-def decode_sent(sent)
-  myarray = sent.split('   ')
+def decode_sentence(sentence)
+  myarray = sentence.split('   ')
   sentarray = []
   myarray.each { |word| sentarray.push(decode_word(word)) }
-  puts sentarray.join(' ')
+  sentarray.join(' ')
 end
+
+puts decode_sentence ('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
