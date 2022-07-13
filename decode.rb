@@ -25,4 +25,4 @@ def decode_sentence(sentence)
   sentarray.join(' ')
 end
 
-puts decode_sentence ('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
+puts decode_sentence('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
