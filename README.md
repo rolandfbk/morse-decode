@@ -1,67 +1,89 @@
-# Ruby Course
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).
+# Morse Decoder
 
-## Set-up Rubocop GitHub Action
+> This is an educational project to decode a [Morse code](https://en.wikipedia.org/wiki/Morse_code) using [Ruby](https://www.ruby-lang.org/en/) programming language.
 
-[Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
+## Built With
 
-This GitHub Action is going to run [Rubocop](https://docs.rubocop.org/en/stable/) to help you find style issues.
+- [x] Programming Language: Ruby
+- [x] Linter: [Rubocop](https://rubocop.org/)
+- [x] VS Code
 
-Please do the following **steps in this order**:
+![International_Morse_Code svg](https://user-images.githubusercontent.com/98527559/178309679-c489d5b7-bca4-4405-9da1-afd5bac239f2.png)
 
-1. In the first commit of your feature branch create a `.github/workflows` folder and add a copy of [`.github/workflows/linters.yml`](.github/workflows/linters.yml) to that folder.
-    - **Remember** to use the file linked above
-    - **Remember** that `.github` folder starts with a dot.
-2. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-3. When you open your first pull request you should see the result of the GitHub Actions:
+## Getting Started
 
-![gh actions checks](../assets/images/gh-actions-rubocop-linters-checks.png)
+To get a local copy up and running follow these simple steps.
 
-Click on the `Details` link to see the full output and the errors that need to be fixed:
+### Prerequisites
 
-![gh actions failing checks](../assets/images/gh-actions-rubocop-failing-checks.png)
+- [x] A web browser like Google Chrome.
+- [x] A code editor like Visual Studio Code with Git and Ruby.
 
-## [OPTIONAL]Set-up RSpec GitHub Action
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
 
-You can run your tests with GitHub Actions to ensure that they are passing before merging a PR.
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
 
-To use the GitHub Action to run your tests, please do the following **steps in this order**:
+### Setup
 
-1. Add a copy of [`.github/workflows/tests.yml`](.github/workflows/tests.yml) to your `.github/workflows` folder.
-    - **Remember** to use the file linked above
-    - Do not modify or delete the [`.github/workflows/linters.yml`](.github/workflows/linters.yml) file that should already be in that folder.
-    - RSpec by default will try to run any file ending in `_spec.rb` inside the `spec` folder. Make sure to follow this convention for your tests files so `rspec` can run your spec files.
-    - You can modify the [`.github/workflows/tests.yml`](.github/workflows/tests.yml) file to better fit your custom needs.
-3. When you open your pull request you should see the result of the GitHub Action:
+Clone the repository using the GitHub link provided below.
 
-![gh actions checks](../assets/images/gh-actions-rspec-tests-checks.png)
+### Install
 
-Click on the `Details` link of the test action to check the results of your tests.
+In the terminal, go to your file directory and run this command.
 
-## Set-up linters in your local env
+```
+$ git clone https://github.com/rolandfbk/morse-decode.git
+```
 
-### [RuboCop](https://docs.rubocop.org/en/stable/)
+### Usage
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html).*
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. **Do not make any changes in config files - they represent style guidelines that you share with your team - which is a group of all Microverse students.**
-    - If you think that change is necessary - open a [Pull Request in this repository](../README.md#contributing) and let your code reviewer know about it.
-5. Run `rubocop`.
-6. Fix linter errors.
-7. **IMPORTANT NOTE**: feel free to research [auto-correct options for Rubocop](https://rubocop.readthedocs.io/en/latest/auto_correct/) if you get a flood of errors but keep in mind that correcting style errors manually will help you to make a habit of writing a clean code!
+Kindly modify the files as needed.
 
-## Troubleshooting
+## Authors
 
-- While using Colorize gem, if you are facing errors with Rspec related to 
-    ```bash
-    LoadError:
-    cannot load such file -- colorize
-    ```
-    please remove ```--deployment``` from line no. [26](https://github.com/shubham14p3/Ruby-capstone-project/blob/ca86784cc88bea7c933e329c0953f07e21bcf6ca/.github/workflows/tests.yml#L16) of test.yml file.
+
+👤 **Author1**
+
+- GitHub: [@githubhandle](https://github.com/Ogaga01)
+- Twitter: [@twitterhandle](https://twitter.com/i_ogaga_n)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ogaga-iyara)
+
+👤 **Author2**
+
+- GitHub: [braincee](https://github.com/braincee)
+- Twitter: [annor0543](https://twitter.com/annor0543)
+- LinkedIn: [Stephen Annor](https://www.linkedin.com/stephen-annor)
+
+👤 **Author3**
+
+- GitHub: [@githubhandle](https://github.com/rolandfbk)
+- Twitter: [@twitterhandle](https://twitter.com/rolandfbk)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/roland-ossisa-yuma-4595547b)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/rolandfbk/morse-decode/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+- Coding Partners
+- Code Reviewers
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
