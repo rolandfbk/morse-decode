@@ -11,4 +11,10 @@ def decode_alpha(alpha)
     morse_dict.key(alpha)
   end
 
-  
+  def decode_word (text)
+    array = text.split
+    wordarray = []
+    array.each {|letter| wordarray.push(decode_char letter)}
+    wordarray.join
+end
+
